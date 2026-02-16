@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STACKLY - Real Estate Marketplace</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/flaticon.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- SVG Icons Sprite -->
+    <svg style="display: none;">
+        <symbol id="icon-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </symbol>
+        <symbol id="icon-apartment" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect>
+            <line x1="9" y1="22" x2="9" y2="2"></line>
+            <line x1="8" y1="6" x2="4" y2="6"></line>
+            <line x1="8" y1="10" x2="4" y2="10"></line>
+            <line x1="8" y1="14" x2="4" y2="14"></line>
+            <line x1="8" y1="18" x2="4" y2="18"></line>
+        </symbol>
+        <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+        </symbol>
+        <symbol id="icon-townhome" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 21h18"></path>
+            <path d="M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3z"></path>
+            <path d="M9 21V9"></path>
+            <path d="M15 21V9"></path>
+        </symbol>
+        <symbol id="icon-bungalow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 20h20"></path>
+            <path d="M10 20V14H14V20"></path>
+            <path d="M12 4L4 12V20H20V12L12 4Z"></path>
+        </symbol>
+        <symbol id="icon-villa" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+        </symbol>
+    </svg>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loader">
+            <img src="images/Stackly-Logo.webp" alt="Loading...">
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Start -->
+    <header class="header-area">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="images/Stackly-Logo.webp" alt="STACKLY Logo">
+                    <span class="brand-text ms-2">STACKLY</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="404.html">About us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="404.html">Listing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="404.html">Property</a></li>
+                        <li class="nav-item"><a class="nav-link" href="404.html">Pages</a></li>
+                        <li class="nav-item"><a class="nav-link" href="404.html">Contact us</a></li>
+                    </ul>
+                    <a href="404.html" class="btn btn-book">Book Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero-section">
+        <div class="container hero-content fade-in-up">
+            <div class="welcome-badge">
+                <img src="images/Stackly-Logo.webp" alt="" style="height: 20px;"> WELCOME TO STACKLY
+            </div>
+            <h1>Invest Today in <br> Your Dream Home</h1>
+            <p>Duis ultricies, tortor a accumsan fermentum, purus diam mollis velit, eu bibendum ipsum erat quis leo.
+                Vestibulum finibus, leo dapibus feugiat rutrum, augue lacus rhoncus velit, vel scelerisque odio est.</p>
+            <div class="hero-btns">
+                <a href="404.html" class="btn btn-orange">View Property</a>
+                <a href="404.html" class="btn btn-outline-white">Contact Now</a>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section End -->
+
+    <!-- Search Box Start -->
+    <div class="container hero-search-container fade-in-up">
+        <div class="search-box">
+            <form class="row g-3">
+                <div class="col-md-2">
+                    <input type="text" class="form-control" placeholder="Enter keywords">
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select">
+                        <option>Sell or Rent</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select">
+                        <option>Property Type</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select">
+                        <option>Location</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <select class="form-select">
+                        <option>Amenities</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-orange w-100">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Search Box End -->
+
+    <!-- Property Types Start -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <span>PROPERTY TYPE</span>
+                <h2>Try Searching By</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-6 fade-in-up">
+                    <a href="404.html" class="type-card d-block">
+                        <div class="type-icon">
+                            <svg width="24" height="24">
+                                <use href="#icon-house"></use>
+                            </svg>
+                        </div>
+                        <h4>Houses</h4>
+                        <p>22 Properties</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 fade-in-up">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg width="24" height="24">
+                                <use href="#icon-apartment"></use>
+                            </svg>
+                        </div>
+                        <h4>Apartments</h4>
+                        <p>32 Properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 fade-in-up">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg width="24" height="24">
+                                <use href="#icon-office"></use>
+                            </svg>
+                        </div>
+                        <h4>Office</h4>
+                        <p>42 Properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 fade-in-up">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg width="24" height="24">
+                                <use href="#icon-townhome"></use>
+                            </svg>
+                        </div>
+                        <h4>Townhome</h4>
+                        <p>18 Properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 fade-in-up">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg width="24" height="24">
+                                <use href="#icon-bungalow"></use>
+                            </svg>
+                        </div>
+                        <h4>Bungalow</h4>
+                        <p>40 Properties</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 fade-in-up">
+                    <div class="type-card">
+                        <div class="type-icon">
+                            <svg width="24" height="24">
+                                <use href="#icon-villa"></use>
+                            </svg>
+                        </div>
+                        <h4>Villa</h4>
+                        <p>15 Properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Property Types End -->
+
+    <!-- Featured Properties Start -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title fade-in-up">
+                <span>OUR PROPERTIES</span>
+                <h2>Best Property For You</h2>
+            </div>
+            <div class="row">
+                <!-- Property 1 -->
+                <div class="col-lg-4 col-md-6 fade-in-up">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="status-badge">Sell</span>
+                            <img src="images/home.webp" alt="">
+                        </div>
+                        <div class="property-content">
+                            <h3>Luxury Family Home</h3>
+                            <p class="location"><i class="fa-solid fa-location-dot text-orange"></i> New York City, CA,
+                                USA</p>
+                            <div class="property-meta">
+                                <span><i class="fa-solid fa-bed"></i> 6 Bedroom</span>
+                                <span><i class="fa-solid fa-bath"></i> 3 Bathroom</span>
+                            </div>
+                            <div class="property-meta mt-2">
+                                <span><i class="fa-solid fa-square-full"></i> 720 sq ft</span>
+                                <span><i class="fa-solid fa-car"></i> 1 Garages</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="price">$150,000</div>
+                                <a href="404.html" class="btn btn-orange">View Property</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property 2 -->
+                <div class="col-lg-4 col-md-6 fade-in-up">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="status-badge">Rent</span>
+                            <img src="images/about.webp" alt="">
+                        </div>
+                        <div class="property-content">
+                            <h3>Equestrian Family Home</h3>
+                            <p class="location"><i class="fa-solid fa-location-dot text-orange"></i> New York City, CA,
+                                USA</p>
+                            <div class="property-meta">
+                                <span><i class="fa-solid fa-bed"></i> 6 Bedroom</span>
+                                <span><i class="fa-solid fa-bath"></i> 3 Bathroom</span>
+                            </div>
+                            <div class="property-meta mt-2">
+                                <span><i class="fa-solid fa-square-full"></i> 720 sq ft</span>
+                                <span><i class="fa-solid fa-car"></i> 1 Garages</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="price">$150,000</div>
+                                <a href="404.html" class="btn btn-orange">View Property</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property 3 -->
+                <div class="col-lg-4 col-md-6 fade-in-up">
+                    <div class="property-card">
+                        <div class="property-img">
+                            <span class="status-badge">Rent</span>
+                            <img src="images/contact.webp" alt="">
+                        </div>
+                        <div class="property-content">
+                            <h3>Mountain View Condos</h3>
+                            <p class="location"><i class="fa-solid fa-location-dot text-orange"></i> New York City, CA,
+                                USA</p>
+                            <div class="property-meta">
+                                <span><i class="fa-solid fa-bed"></i> 6 Bedroom</span>
+                                <span><i class="fa-solid fa-bath"></i> 3 Bathroom</span>
+                            </div>
+                            <div class="property-meta mt-2">
+                                <span><i class="fa-solid fa-square-full"></i> 720 sq ft</span>
+                                <span><i class="fa-solid fa-car"></i> 1 Garages</span>
+                            </div>
+                            <div class="property-footer">
+                                <div class="price">$150,000</div>
+                                <a href="404.html" class="btn btn-orange">View Property</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Properties End -->
+
+    <!-- About Section Start -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 fade-in-up">
+                    <div class="about-img-wrap">
+                        <img src="images/home-video.webp" alt="About" class="img-fluid about-img-main w-100">
+                        <a href="404.html" class="play-btn"><i class="fa-solid fa-play"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 ps-lg-5 fade-in-up">
+                    <div class="section-title text-start mb-4">
+                        <span>ABOUT US</span>
+                        <h2>The Leading Real Estate About Marketplace.</h2>
+                    </div>
+                    <p>Duis pulvinar metus elit, ut aliquam est sollicitudin finibus. Integer lobortis est interdum.
+                        Suspendisse nunc est, varius quis fringilla ac, commodo a ante. Praesent non elit cursus,
+                        aliquam sapien quis, dictum tortor.</p>
+                    <div class="row mt-4">
+                        <div class="col-6 mb-3"><i class="fa-solid fa-check text-orange me-2"></i> Smart Home Design
+                        </div>
+                        <div class="col-6 mb-3"><i class="fa-solid fa-check text-orange me-2"></i> Beautiful Scene
+                            Around
+                        </div>
+                        <div class="col-6 mb-3"><i class="fa-solid fa-check text-orange me-2"></i> Exceptional Lifestyle
+                        </div>
+                        <div class="col-6 mb-3"><i class="fa-solid fa-check text-orange me-2"></i> Complete 24/7
+                            Security
+                        </div>
+                    </div>
+                    <a href="404.html" class="btn btn-orange mt-4">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Cities Start -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <span>LOCATION</span>
+                <h2>Properties by Cities</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 fade-in-up">
+                    <div class="city-box">
+                        <img src="images/Surabaya.webp" alt="">
+                        <div class="city-overlay">
+                            <h3>Surabaya</h3>
+                            <p>22 Properties</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in-up">
+                    <div class="city-box">
+                        <img src="images/Jakarta.webp" alt="">
+                        <div class="city-overlay">
+                            <h3>Jakarta</h3>
+                            <p>22 Properties</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in-up">
+                    <div class="city-box">
+                        <img src="images/listing.webp" alt="">
+                        <div class="city-overlay">
+                            <h3>Medan</h3>
+                            <p>22 Properties</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 fade-in-up">
+                    <div class="city-box">
+                        <img src="images/contact.webp" alt="">
+                        <div class="city-overlay">
+                            <h3>Bandung</h3>
+                            <p>22 Properties</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Cities End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="row fade-in-up">
+                <div class="col-lg-3">
+                    <img src="images/Stackly-Logo.webp" alt="STACKLY" class="mb-4 footer-logo">
+                    <p>Duis pulvinar metus elit, ut aliquam est sollicitudin finibus. Integer lobortis est interdum.</p>
+                    <div class="social-links mt-4">
+                        <a href="404.html" class="me-3"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="404.html" class="me-3"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" class="me-3"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="404.html" class="me-3"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 px-lg-5">
+                    <h4>Contact Info</h4>
+                    <p><i class="fa-solid fa-location-dot text-orange me-2"></i> 123, Lorem Ipsum, Street no, Cityname,
+                        Country
+                        123456</p>
+                    <p><i class="fa-solid fa-phone text-orange me-2"></i> +0 12345 67890</p>
+                    <p><i class="fa-solid fa-envelope text-orange me-2"></i> info@domainname.com</p>
+                </div>
+                <div class="col-lg-2">
+                    <h4>Quick Links</h4>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="404.html">Listing</a></li>
+                        <li><a href="404.html">Property</a></li>
+                        <li><a href="404.html">Blog</a></li>
+                        <li><a href="404.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h4>Subscribe Our Newsletter</h4>
+                    <p>Duis pulvinar metus elit, ut aliquam est sollicitudin finibus.</p>
+                    <div class="subscribe-box mb-4">
+                        <input type="email" placeholder="Enter email address here">
+                        <button class="btn btn-orange">Subscribe</button>
+                    </div>
+                    <h4>Appointment</h4>
+                    <a href="404.html" class="btn btn-orange w-100">Book Appointment</a>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>Copyright © 2024 STACKLY. All rights reserved. <span class="ms-4">Privacy & Policy | Terms &
+                        Condition</span></p>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JS Files -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+    <script src="js/function.js"></script>
+</body>
+
+</html>
